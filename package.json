@@ -1,0 +1,26 @@
+{
+  "name": "rock-paper-scissors-lizard-spock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Roberto H.",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "dependencies": {
+    "all": "0.0.0",
+    "browser-sync": "^2.26.7",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-eslint": "^5.0.0",
+    "gulp-prettyerror": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-terser": "^1.2.0",
+    "gulp-uglifycss": "^1.1.0"
+  }
+}
