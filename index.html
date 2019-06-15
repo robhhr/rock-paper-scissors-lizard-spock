@@ -8,7 +8,45 @@
     <title>Rock, Paper, Scissors, Lizard, Spock</title>
 </head>
 <body>
+    <header>
+        <p>Rock Paper Scissors Lizard Spock</p>
+    </header>
+    <div class="game">
+        <div class="score-board">
+            <div id="user-label" class="badge">User</div>
+            <div id="computer-label" class="badge">Computer</div>
+            <span id="user-score">0</span>:<span id="computer-score">0</span>
+        </div>
+        <div class="result">
+            <p>Paper covers rock. You win!</p>
+        </div>
+        <div class="choices rock">
+            <div class="choice">
+                <img src="images/rock-hand.png" alt="">
+            </div>
+        </div>
+        <div class="choices scissors">
+                <div class="choice">
+                    <img src="images/scissors-hand.png" alt="">
+                </div>
+        </div>
+        <div class="choices paper">
+                <div class="choice">
+                    <img src="images/paper-hand.png" alt="">
+                </div>
+        </div>
+        <div class="choices lizard">
+                <div class="choice">
+                    <img src="images/lizard-emoji.png" alt="">
+                </div>
+        </div>
+        <div class="choices spock">
+                <div class="choice">
+                    <img src="images/spock-hand.png" alt="">
+                </div>
+        </div>
+        <p class="action-message">Make your move</p>
+    </div>
 </body>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="build/js/index.min.js"></script>
 </html>

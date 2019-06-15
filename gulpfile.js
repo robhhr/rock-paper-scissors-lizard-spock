@@ -10,22 +10,16 @@ const gulp = require("gulp"),
     uglifycss = require('gulp-uglifycss');
 
 gulp.task('sass', function(done) {
-    gulp
+    return gulp
         .src('./src/sass/style.scss')
         .pipe(sourcemaps.init())
         .pipe(prettyError())
         .pipe(sass())
-        .pipe(
-        autoprefixer({
-            browsers: ['last 2 versions']
-        })
-        )
+        .pipe(autoprefixer())
         .pipe(uglifycss())
         .pipe(rename('style.min.css'))
         .pipe(sourcemaps.write('../maps'))
         .pipe(gulp.dest('./build/css'));
-      
-        done();
 });
 
 gulp.task('browser-sync', function() {
@@ -47,13 +41,14 @@ gulp.task("scripts", function() {
       .pipe(gulp.dest("./build/js"));
 });
 
-gulp.task("reload", function() {
+gulp.task("reload", function(done) {
     browserSync.reload();
+    done();
 });
   
 gulp.task('watch', function(done) {
     gulp.watch(["./src/js/*.js", "index.html"], gulp.series("scripts", "reload"));
-    gulp.watch('./src/sass/*.scss', gulp.series('sass'));
+    gulp.watch(["./src/sass/*.scss"], gulp.series('sass', "reload"));
     done();
 });
   
