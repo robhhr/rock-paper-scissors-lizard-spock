@@ -10,11 +10,50 @@ const scissors = document.getElementById('scissors');
 const lizard = document.getElementById('lizard');
 const spock = document.getElementById('spock');
 
-function mainGame() {
+function getAIChoice() {
+  const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
+  const randomNumber = Math.floor(Math.random() * 5);
+  return choices[randomNumber];
+};
 
-  function gameStart(choice) {
-    console.log("hey", choice)
-  };
+function gameStart(userChoice) {
+  const AIChoice = getAIChoice();
+  switch (userChoice + AIChoice) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+    case "lizardspock":
+    case "spockscissors":
+    case "rocklizard":
+    case "scissorsspock":
+    case "lizardpaper":
+    case "paperspock":
+    case "spockrock":
+      console.log("You win!");
+      break;
+    case "scissorsrock":
+    case "rockpaper":
+    case "scissorspaper":
+    case "spocklizard":
+    case "scissorsspock":
+    case "lizardrock":
+    case "spockscissors":
+    case "paperlizard":
+    case "spockpaper":
+    case "rockspock":
+      console.log("You lose");
+      break;
+    case "scissorsscissors":
+    case "lizardlizard":
+    case "spockspock":
+    case "rockrock":
+    case "scissorsscissors":
+      console.log("Tie, try again");
+      break;
+  }
+}
+
+function mainGame() {
 
   rock.addEventListener('click', function() {
     gameStart("rock")
