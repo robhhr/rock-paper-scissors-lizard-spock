@@ -1,7 +1,7 @@
-const userScore = 0;
-const computerScore = 0;
-const userScoreSpan = document.getElementById('user-score');
-const computerScoreSpan = document.getElementById('computer-score');
+let userScore = 0;
+const AIScore = 0;
+const userScoreHTML = document.getElementById('user-score');
+const AIScoreHTML = document.getElementById('computer-score');
 const scoreBoard = document.getElementsByClassName('score-board');
 const results = document.getElementsByClassName('result');
 const rock = document.getElementById('rock');
@@ -14,6 +14,20 @@ function getAIChoice() {
   const choices = ['rock', 'paper', 'scissors', 'lizard', 'spock'];
   const randomNumber = Math.floor(Math.random() * 5);
   return choices[randomNumber];
+};
+
+function userWin() {
+  userScore++;
+  userScoreHTML.innerHTML = userScore;
+  AIScore.innerHTML = AIScore;
+};
+
+function userLost() {
+  console.log("LOST");
+};
+
+function tie() {
+  console.log("TIE")
 };
 
 function gameStart(userChoice) {
@@ -29,7 +43,7 @@ function gameStart(userChoice) {
     case "lizardpaper":
     case "paperspock":
     case "spockrock":
-      console.log("You win!");
+      userWin();
       break;
     case "scissorsrock":
     case "rockpaper":
@@ -41,14 +55,14 @@ function gameStart(userChoice) {
     case "paperlizard":
     case "spockpaper":
     case "rockspock":
-      console.log("You lose");
+      userLost();
       break;
     case "scissorsscissors":
     case "lizardlizard":
     case "spockspock":
     case "rockrock":
     case "scissorsscissors":
-      console.log("Tie, try again");
+      tie();
       break;
   }
 }
