@@ -27,20 +27,19 @@ function convertText(letter) {
 function userWin(user, AI) {
   userScore++;
   userScoreHTML.innerHTML = userScore;
-  AIScore.innerHTML = AIScore;
+  AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congratulations!`;
 };
 
 function userLost(user, AI) {
   AIScore++;
   userScoreHTML.innerHTML = userScore;
-  AIScore.innerHTML = AIScore;
+  AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again!`;
 };
 
 function tie(user, AI) {
-  AIScore.innerHTML = AIScore;
-  results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. It's a draw! Roll again!`;
+  results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. It's a draw!`;
 };
 
 function gameStart(userChoice) {
