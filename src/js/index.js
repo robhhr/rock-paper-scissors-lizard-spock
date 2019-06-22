@@ -1,9 +1,9 @@
 let userScore = 0;
-const AIScore = 0;
+let AIScore = 0;
 const userScoreHTML = document.getElementById('user-score');
 const AIScoreHTML = document.getElementById('computer-score');
 const scoreBoard = document.getElementsByClassName('score-board');
-const results = document.getElementsByClassName('result');
+const results = document.getElementById('outcome');
 const rock = document.getElementById('rock');
 const paper = document.getElementById('paper');
 const scissors = document.getElementById('scissors');
@@ -16,18 +16,31 @@ function getAIChoice() {
   return choices[randomNumber];
 };
 
-function userWin() {
+function convertText(letter) {
+  if (letter === "rock") return "Rock";
+  if (letter === "paper") return "Paper";
+  if (letter === "scissors") return "Scissors";
+  if (letter === "lizard") return "Lizard";
+  return "Spock";
+}
+
+function userWin(user, AI) {
   userScore++;
   userScoreHTML.innerHTML = userScore;
   AIScore.innerHTML = AIScore;
+  results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congratulations!`;
 };
 
-function userLost() {
-  console.log("LOST");
+function userLost(user, AI) {
+  AIScore++;
+  userScoreHTML.innerHTML = userScore;
+  AIScore.innerHTML = AIScore;
+  results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again!`;
 };
 
-function tie() {
-  console.log("TIE")
+function tie(user, AI) {
+  AIScore.innerHTML = AIScore;
+  results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. It's a draw! Roll again!`;
 };
 
 function gameStart(userChoice) {
@@ -43,7 +56,7 @@ function gameStart(userChoice) {
     case "lizardpaper":
     case "paperspock":
     case "spockrock":
-      userWin();
+      userWin(userChoice, AIChoice);
       break;
     case "scissorsrock":
     case "rockpaper":
@@ -55,14 +68,14 @@ function gameStart(userChoice) {
     case "paperlizard":
     case "spockpaper":
     case "rockspock":
-      userLost();
+      userLost(userChoice, AIChoice);
       break;
     case "scissorsscissors":
     case "lizardlizard":
     case "spockspock":
     case "rockrock":
     case "scissorsscissors":
-      tie();
+      tie(userChoice, AIChoice);
       break;
   }
 }
