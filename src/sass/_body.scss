@@ -2,19 +2,31 @@ body {
     background-color: darkgray;
 }
 
-// .video{
-//     overflow:hidden;
-//     padding-bottom:56.25%;
-//     position:relative;
-//     height:0;
-//     iframe {
-//         left:0;
-//         top:0;
-//         height:100%;
-//         width:100%;
-//         position:absolute;
-//     }    
-// }
+.exp {
+    display: flex;
+    flex-direction: column;
+    background-color: #a71313;
+    h2 {
+        color: #d6a444;
+        font-family: 'ArcadeClassic';
+        font-weight: normal;
+        font-style: normal;
+        font-size: $text-mobile;
+        text-align: center;
+        word-spacing: 5px;
+        padding: 15px 0;
+    }
+    .video {
+        align-self: center;
+        width: 95%;
+        padding-bottom: 10px;
+        iframe {
+            height: 200px;
+            width: 100%;
+        }
+    }
+    
+}
 
 .game {
     display: flex;
