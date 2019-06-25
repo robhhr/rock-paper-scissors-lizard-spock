@@ -28,18 +28,18 @@ function userWin(user, AI) {
   userScore++;
   userScoreHTML.innerHTML = userScore;
   AIScoreHTML.innerHTML = AIScore;
-  results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congratulations!`;
+  results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congrats! 🏆`;
 };
 
 function userLost(user, AI) {
   AIScore++;
   userScoreHTML.innerHTML = userScore;
   AIScoreHTML.innerHTML = AIScore;
-  results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again!`;
+  results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again! ❌`;
 };
 
 function tie(user, AI) {
-  results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. It's a draw!`;
+  results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. Draw! ♻`;
 };
 
 function gameStart(userChoice) {
