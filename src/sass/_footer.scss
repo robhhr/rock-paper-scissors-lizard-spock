@@ -1,0 +1,22 @@
+footer {
+    background: darken(#204056, 10%);
+    height: 100px;
+    font-family: 'ArcadeClassic';
+    font-weight: normal;
+    font-style: normal;
+    font-size: $text-mobile - 4;
+    color: #D2D2D2;
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px;
+        word-spacing: 5px;
+        a, a:visited {
+            color: #D2D2D2;
+        }
+    }
+    p {
+        font-size: $text-mobile - 8;
+        padding: 0 10px;
+    }
+}

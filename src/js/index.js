@@ -25,21 +25,30 @@ function convertText(letter) {
 }
 
 function userWin(user, AI) {
+  const colorSelector = document.getElementById(user);
   userScore++;
   userScoreHTML.innerHTML = userScore;
   AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congrats! 🏆`;
+  colorSelector.classList.add('user-win');
+  setTimeout(function() { colorSelector.classList.remove('user-win') }, 350);
 };
 
 function userLost(user, AI) {
+  const colorSelector = document.getElementById(user);
   AIScore++;
   userScoreHTML.innerHTML = userScore;
   AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again! ❌`;
+  colorSelector.classList.add('user-loss');
+  setTimeout(function() { colorSelector.classList.remove('user-loss') }, 350);
 };
 
 function tie(user, AI) {
+  const colorSelector = document.getElementById(user);
   results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. Draw! ♻`;
+  colorSelector.classList.add('user-draw');
+  setTimeout(function() { colorSelector.classList.remove('user-draw') }, 350);
 };
 
 function gameStart(userChoice) {
