@@ -14,14 +14,23 @@ body {
         text-align: center;
         word-spacing: 5px;
         padding: 15px 0;
+        @include tablet-mode {
+            font-size: $text-tablet;
+        }
     }
     .video {
         align-self: center;
-        width: 95%;
+        width: 350px;
         padding-bottom: 10px;
+        @include tablet-mode {
+            width: 450px;
+        }
         iframe {
             height: 200px;
             width: 100%;
+            @include tablet-mode {
+                height: 300px;
+            }
         }
     } 
 }
@@ -35,7 +44,7 @@ body {
 
 .score-board {
     display: flex;
-    width: 50%;
+    width: 200px;
     font-family: 'ArcadeClassic';
     font-weight: normal;
     font-style: normal;
@@ -47,12 +56,19 @@ body {
     align-items: center;
     padding: 20px 0;
     position: relative;
+    @include tablet-mode {
+        font-size: $text-tablet * 1.5;
+        width: 250px;
+    }
     .badge {
         color: white;
         background-color: #204056;
         border: 2px solid lightcoral;
         font-size: $text-mobile;
         padding: 2px 10px;
+        @include tablet-mode {
+            font-size: $text-tablet;
+        }
     }
     #user-label {
         position: absolute;

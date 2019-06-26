@@ -3,7 +3,6 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
-    
     padding: 20px;
     p {
         color: white;
@@ -16,6 +15,9 @@ header {
         filter: blur(0.007em);
         text-shadow: 0 0 0.15em #1da9cc;
         animation: shake 5s linear forwards infinite;
+        @include tablet-mode {
+            font-size: $header-tablet;
+        }
     }
 }
 
