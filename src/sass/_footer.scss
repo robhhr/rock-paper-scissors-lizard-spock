@@ -6,11 +6,18 @@ footer {
     font-style: normal;
     font-size: $text-mobile - 4;
     color: #D2D2D2;
+    @include tablet-mode {
+        height: 150px;
+        font-size: $text-tablet - 4;
+    }
     span {
         display: inline-block;
         vertical-align: middle;
         padding: 10px;
         word-spacing: 5px;
+        @include tablet-mode {
+            padding: 20px;
+        }
         a, a:visited {
             color: #D2D2D2;
         }
@@ -18,5 +25,8 @@ footer {
     p {
         font-size: $text-mobile - 8;
         padding: 0 10px;
+        @include tablet-mode {
+            font-size: $text-tablet - 10;
+        }
     }
 }
