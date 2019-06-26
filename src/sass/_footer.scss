@@ -11,6 +11,7 @@ footer {
         font-size: $text-tablet - 4;
     }
     @include desktop-mode {
+        order: 4;
         font-size: $text-desktop - 4;
     }
     span {

@@ -10,8 +10,10 @@ header {
         justify-content: center;
     }
     @include desktop-mode {
+        order: 1;
+        background: linear-gradient(rgba( 0, 0, 0,.5)), url(/images/desktop-background.jpg);
         align-items: center;
-        height: 80px;
+        height: 100px;
     }
     p {
         color: white;
