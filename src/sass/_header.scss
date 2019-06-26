@@ -4,6 +4,15 @@ header {
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 20px;
+    @include tablet-mode {
+        display: flex;
+        height: 60px;
+        justify-content: center;
+    }
+    @include desktop-mode {
+        align-items: center;
+        height: 80px;
+    }
     p {
         color: white;
         text-align: center;
@@ -16,7 +25,12 @@ header {
         text-shadow: 0 0 0.15em #1da9cc;
         animation: shake 5s linear forwards infinite;
         @include tablet-mode {
+            width: 500px;
             font-size: $header-tablet;
+        }
+        @include desktop-mode {
+            width: 100%;
+            font-size: $header-desktop;
         }
     }
 }
