@@ -16,7 +16,7 @@ header {
         height: 100px;
     }
     p {
-        color: white;
+        color: $white;
         text-align: center;
         font-size: $header-mobile;
         font-family: 'ArcadeClassic';
@@ -27,12 +27,12 @@ header {
         text-shadow: 0 0 0.15em #1da9cc;
         animation: shake 5s linear forwards infinite;
         @include tablet-mode {
-            width: 500px;
             font-size: $header-tablet;
+            width: 500px;
         }
         @include desktop-mode {
-            width: 100%;
             font-size: $header-desktop;
+            width: 100%;
         }
     }
 }

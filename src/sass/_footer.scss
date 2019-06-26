@@ -1,11 +1,11 @@
 footer {
-    background: darken(#204056, 10%);
+    background: darken($blue, 10%);
     height: 100px;
     font-family: 'ArcadeClassic';
     font-weight: normal;
     font-style: normal;
     font-size: $text-mobile - 4;
-    color: #D2D2D2;
+    color: $light_gray;
     @include tablet-mode {
         height: 150px;
         font-size: $text-tablet - 4;
@@ -22,8 +22,11 @@ footer {
         @include tablet-mode {
             padding: 20px;
         }
+        @include desktop-mode {
+            padding: 20px 50px;
+        }
         a, a:visited {
-            color: #D2D2D2;
+            color: $light_gray;
         }
     }
     p {
@@ -31,6 +34,9 @@ footer {
         padding: 0 10px;
         @include tablet-mode {
             font-size: $text-tablet - 10;
+        }
+        @include tablet-mode {
+            padding: 0 50px;
         }
     }
 }

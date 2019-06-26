@@ -1,5 +1,5 @@
 body {
-    background-color: #204056;
+    background-color: $blue;
     @include desktop-mode {
         display: flex;
         flex-direction: column;
@@ -14,14 +14,14 @@ body {
         padding-bottom: 50px;
     }
     h2 {
-        color: #c1c730;
         font-family: 'ArcadeClassic';
         font-weight: normal;
         font-style: normal;
         font-size: $text-mobile;
         text-align: center;
-        word-spacing: 5px;
+        color: $gold;
         padding: 15px 0;
+        word-spacing: 5px;
         @include tablet-mode {
             font-size: $text-tablet;
         }
@@ -30,8 +30,8 @@ body {
         }
     }
     .video {
-        align-self: center;
         width: 350px;
+        align-self: center;
         padding-bottom: 10px;
         @include tablet-mode {
             width: 450px;
@@ -70,7 +70,7 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: $text-mobile * 1.5;
-    color: white;
+    color: $white;
     border: 2px dotted #c1c730;
     border-radius: 5px;
     justify-content: center;
@@ -87,8 +87,8 @@ body {
         padding: 30px 0;
     }
     .badge {
-        color: white;
-        background-color: #204056;
+        color: $white;
+        background-color: $blue;
         border: 2px solid lightcoral;
         font-size: $text-mobile;
         padding: 2px 10px;
@@ -118,8 +118,8 @@ body {
     #outcome {
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
-        color: white;
         font-size: $text-mobile - 3;
+        color: $white;
         @include tablet-mode {
             font-size: $text-tablet - 3;
         }
@@ -134,16 +134,16 @@ body {
     padding: 20px 0;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
-    width: 80%;
     height: 200px;
+    width: 80%;
     @include tablet-mode {
         height: 300px;
     }
     @include desktop-mode {
-        height: auto;
-        padding: 20px 0;
         grid-template-columns: 20% 20% 20% 20% 20%;
         grid-template-rows: 100%;
+        height: auto;
+        padding: 20px 0;
     }
     .choices {
         margin: auto;
@@ -196,7 +196,7 @@ body {
     justify-content: center;
     align-items: center;
     border: none;
-    background: darken(#204056, 2.5%);
+    background: darken($blue, 2.5%);
     border-radius: 50%;
     padding: 15px;
     margin: 0;
@@ -215,16 +215,16 @@ body {
 }
 
 .user-win {
-    border: 2px solid #39ff14;
+    border: 2px solid $green;
     border-radius: 50%;
 }
 
 .user-loss {
-    border: 2px solid #FF0000;
+    border: 2px solid $red;
     border-radius: 50%;
 }
 
 .user-draw {
-    border: 2px solid #DCDDDD;
+    border: 2px solid $light_gray;
     border-radius: 50%;
 }

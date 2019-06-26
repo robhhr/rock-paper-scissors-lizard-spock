@@ -1,11 +1,21 @@
-// Text size variables
+// General colors
+$blue: #204056;
+$gold: #c1c730;
+$white: #FFFFFF;
+$green: #39ff14;
+$red: #FF0000;
+$light_gray: #DCDDDD;
+
+// Header size variables
 $header-mobile: 26px;
 $header-tablet: 30px;
 $header-desktop: 38px;
 
+//Text size variables
 $text-mobile: 20px;
 $text-tablet: 26px;
 $text-desktop: 30px;
 
 // Breakpoints
 $tablet-width: 600px;
+$desktop-width: 1240px;
