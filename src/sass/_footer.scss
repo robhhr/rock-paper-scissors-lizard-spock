@@ -10,6 +10,9 @@ footer {
         height: 150px;
         font-size: $text-tablet - 4;
     }
+    @include desktop-mode {
+        font-size: $text-desktop - 4;
+    }
     span {
         display: inline-block;
         vertical-align: middle;
