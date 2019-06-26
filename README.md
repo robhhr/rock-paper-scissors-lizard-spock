@@ -16,7 +16,7 @@ $ gulp
 ```
 
 ### Project Preview
-<img src="./images/desktop-ss.png" width="70%" height="600" >
+<img src="./images/desktop-ss.png" width="700" height="500" >
 
 ### Technologies Used
 * VS Code
@@ -24,4 +24,4 @@ $ gulp
 * CSS (Sass)
 * JS
 
-This project was created with 💙 by <a href="twitter.com/hallorob>">Roberto</a>
+This project was created with 💙 by <a href="https://twitter.com/hallorob">Roberto</a>
