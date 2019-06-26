@@ -17,6 +17,9 @@ body {
         @include tablet-mode {
             font-size: $text-tablet;
         }
+        @include desktop-mode {
+            font-size: $text-desktop;
+        }
     }
     .video {
         align-self: center;
@@ -25,11 +28,17 @@ body {
         @include tablet-mode {
             width: 450px;
         }
+        @include desktop-mode {
+            width: 550px;
+        }
         iframe {
             height: 200px;
             width: 100%;
             @include tablet-mode {
                 height: 300px;
+            }
+            @include desktop-mode {
+                height: 400px;
             }
         }
     } 
@@ -40,6 +49,9 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 10px 0;
+    @include desktop-mode {
+        padding: 30px 0;
+    }
 }
 
 .score-board {
@@ -60,6 +72,11 @@ body {
         font-size: $text-tablet * 1.5;
         width: 250px;
     }
+    @include desktop-mode {
+        font-size: $text-desktop * 1.5;
+        width: 300px;
+        padding: 30px 0;
+    }
     .badge {
         color: white;
         background-color: #204056;
@@ -68,6 +85,9 @@ body {
         padding: 2px 10px;
         @include tablet-mode {
             font-size: $text-tablet;
+        }
+        @include desktop-mode {
+            font-size: $text-desktop;
         }
     }
     #user-label {
@@ -94,6 +114,9 @@ body {
         @include tablet-mode {
             font-size: $text-tablet - 3;
         }
+        @include desktop-mode {
+            font-size: $text-desktop - 3;
+        }
     }
 }
 
@@ -107,6 +130,10 @@ body {
     @include tablet-mode {
         height: 300px;
     }
+    @include desktop-mode {
+        grid-template-columns: 20% 20% 20% 20% 20%;
+        grid-template-rows: 100%;
+    }
     .choices {
         margin: auto;
     }
@@ -115,22 +142,42 @@ body {
 #rock {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    @include desktop-mode {
+        grid-column: 1 / 2;
+        grid-row: 1 / 1;
+    }
 }
 #paper {
     grid-column: 3 / 4;
     grid-row: 1 / 2;
+    @include desktop-mode {
+        grid-column: 2 / 3;
+        grid-row: 1 / 1;
+    }
 }
 #scissors {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
+    @include desktop-mode {
+        grid-column: 3 / 4;
+        grid-row: 1 / 1;
+    }
 }
 #lizard {
     grid-column: 3 / 4;
     grid-row: 3 / 4;
+    @include desktop-mode {
+        grid-column: 4 / 5;
+        grid-row: 1 / 1;
+    }
 }
 #spock {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+    @include desktop-mode {
+        grid-column: 5 / 6;
+        grid-row: 1 / 1;
+    }
 }
 
 .choice {
@@ -148,6 +195,10 @@ body {
         @include tablet-mode {
             width: 55px;
             height: 55px;
+        }
+        @include desktop-mode {
+            width: 65px;
+            height: 65px;
         }
     }
 }
