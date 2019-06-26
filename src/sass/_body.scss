@@ -91,6 +91,9 @@ body {
         font-weight: bold;
         color: white;
         font-size: $text-mobile - 3;
+        @include tablet-mode {
+            font-size: $text-tablet - 3;
+        }
     }
 }
 
@@ -101,6 +104,9 @@ body {
     grid-template-rows: 33% 33% 33%;
     width: 80%;
     height: 200px;
+    @include tablet-mode {
+        height: 300px;
+    }
     .choices {
         margin: auto;
     }
@@ -139,6 +145,10 @@ body {
     img {
         width: 45px;
         height: 45px;
+        @include tablet-mode {
+            width: 55px;
+            height: 55px;
+        }
     }
 }
 
