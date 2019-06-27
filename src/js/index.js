@@ -31,7 +31,7 @@ function userWin(user, AI) {
   AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} defeats ${convertText(AI)}. Congrats! 🏆`;
   colorSelector.classList.add('user-win');
-  setTimeout(function() { colorSelector.classList.remove('user-win') }, 350);
+  setTimeout(() => colorSelector.classList.remove('user-win'), 350);
 };
 
 function userLost(user, AI) {
@@ -41,14 +41,14 @@ function userLost(user, AI) {
   AIScoreHTML.innerHTML = AIScore;
   results.innerHTML = `${convertText(user)} losses to ${convertText(AI)}. Try again! ❌`;
   colorSelector.classList.add('user-loss');
-  setTimeout(function() { colorSelector.classList.remove('user-loss') }, 350);
+  setTimeout(() => colorSelector.classList.remove('user-loss'), 350);
 };
 
 function tie(user, AI) {
   const colorSelector = document.getElementById(user);
   results.innerHTML = `${convertText(user)} equals ${convertText(AI)}. Draw! ♻`;
   colorSelector.classList.add('user-draw');
-  setTimeout(function() { colorSelector.classList.remove('user-draw') }, 350);
+  setTimeout(() => colorSelector.classList.remove('user-draw'), 350);
 };
 
 function gameStart(userChoice) {
@@ -90,25 +90,15 @@ function gameStart(userChoice) {
 
 function mainGame() {
 
-  rock.addEventListener('click', function() {
-    gameStart("rock")
-  });
+  rock.addEventListener('click', () => gameStart("rock"));
 
-  paper.addEventListener('click', function() {
-    gameStart("paper")
-  });
+  paper.addEventListener('click', () => gameStart("paper"));
 
-  scissors.addEventListener('click', function() {
-    gameStart("scissors")
-  });
+  scissors.addEventListener('click', () => gameStart("scissors"));
 
-  lizard.addEventListener('click', function() {
-    gameStart("lizard")
-  });
+  lizard.addEventListener('click', () => gameStart("lizard"));
 
-  spock.addEventListener('click', function () {
-    gameStart("spock")
-  });
+  spock.addEventListener('click', () => gameStart("spock"));
 };
 
 mainGame();
