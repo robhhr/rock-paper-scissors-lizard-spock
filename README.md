@@ -22,6 +22,6 @@ $ gulp
 * VS Code
 * HTML
 * CSS (Sass)
-* JS
+* JavaScript
 
 This project was created with 💙 by <a href="https://twitter.com/hallorob">Roberto</a>
